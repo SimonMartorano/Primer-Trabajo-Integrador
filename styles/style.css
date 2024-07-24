@@ -1,1 +1,109 @@
+/* General */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+}
+
+nav, main, footer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+  }
+  
+img {
+  width: 100%;
+}
+  
+/* Navegacion */
+
+header {
+    border: 2px solid;
+}
+
+.barra-de-navegacion {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 3rem;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+/* Main */
+
+h1 {
+    text-align: center;
+}
+
+.ofertas-titulo{
+  font-size: 2rem;
+}
+
+.contenedor-productos {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.producto {
+  width: 250px;
+  border: 2px solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.producto img {
+  border-radius: 10px;
+}
+
+.producto a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.nombre-del-producto {
+  font-size: 1.2rem;
+}
+
+.precio-base {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.descuento {
+  text-decoration: none;
+  background-color: greenyellow;
+  border-radius: 20px;
+  padding: 7px;
+}
+
+.precio-final {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+
+/* Footer */
+
 
