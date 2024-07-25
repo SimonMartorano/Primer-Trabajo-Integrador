@@ -9,27 +9,39 @@
 body {
   margin: 0;
   line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
-nav, main, footer {
-    width: 80%;
-    margin: 0 auto;
+nav,
+main,
+footer {
+  width: 80%;
+  margin: 0 auto;
 }
+
 
 a {
-    text-decoration: inherit;
-    color: inherit;
-    cursor: auto;
-  }
-  
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+
 img {
   width: 100%;
 }
-  
+
+h1 {
+  text-align: center;
+  margin: 60px;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
 /* Navegacion */
 
 header {
-    border: 2px solid;
+  border: 2px solid;
 }
 
 .barra-de-navegacion {
@@ -50,14 +62,6 @@ header {
 
 /* Main */
 
-h1 {
-    text-align: center;
-}
-
-.ofertas-titulo{
-  font-size: 2rem;
-}
-
 .contenedor-productos {
   display: flex;
   justify-content: space-evenly;
@@ -66,7 +70,7 @@ h1 {
 
 .producto {
   width: 250px;
-  border: 2px solid;
+  border: 1px dashed;
   border-radius: 10px;
   text-align: center;
 }
@@ -103,7 +107,19 @@ h1 {
   font-size: 1.4rem;
 }
 
+/* Sobre nosotros*/
+
+.sobre-nosotros {
+  font-size: 1.2rem;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* Footer */
 
-
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
