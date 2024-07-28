@@ -1,0 +1,97 @@
+/* General */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+nav,
+main,
+footer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+h1 {
+  color: teal;
+  text-align: center;
+  margin: 60px;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+/* Navegacion */
+
+header {
+  color: teal;
+  background-color: beige;
+  position: sticky;
+  top: 0;
+}
+
+.barra-de-navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.menu {
+  display: flex;
+  gap: 70px;
+  font-size: 1.3rem;
+  list-style: none;
+}
+
+.menu li:hover {
+  border-bottom: 2px solid teal;
+  margin-bottom: -2px;
+}
+
+/* Main */
+
+
+
+/* Footer */
+
+footer {
+  border-top: 1px solid;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: center;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 50px;
+}
+
+i {
+  color: teal;
+}
+
+.fa-brands:hover {
+  color: yellowgreen;
+}
