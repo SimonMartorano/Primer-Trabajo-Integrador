@@ -69,7 +69,40 @@ header {
 
 /* Main */
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  gap: 10px;
+  width: 90%;
+  max-width: 700px;
+}
 
+label {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+ input, textarea {
+  width: 100%;
+}
+
+textarea {
+  height: 200px;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: teal;
+  background-color: white;
+  border: 2px solid teal;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 80px;
+  cursor: pointer;
+}
 
 /* Footer */
 
