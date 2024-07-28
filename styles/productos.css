@@ -108,7 +108,7 @@ header {
 
 .nombre-del-producto {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .precio-base {
@@ -126,6 +126,12 @@ header {
 .precio-final {
   font-weight: 500;
   font-size: 1.4rem;
+  margin-top: 0;
+}
+
+.input-cantidad-producto {
+  margin-bottom: 20px;
+  width: 50px;
 }
 
 /* Footer */
