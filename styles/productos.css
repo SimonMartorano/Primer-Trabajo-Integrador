@@ -138,6 +138,31 @@ header {
   width: 50px;
 }
 
+.total {
+  text-align: center;
+  margin-top: 30px;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: teal;
+  background-color: white;
+  border: 2px solid teal;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 30px auto;
+  display: block;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: greenyellow;
+}
+
 /* Footer */
 
 footer {
