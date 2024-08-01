@@ -1,5 +1,6 @@
 const productos = [
     {
+        id: 0,
         nombre: "Coca Cola 2,25Lts.",
         precio: 3100,
         imagen: "/design/images/coca-cola-2.25lts.webp",
@@ -8,7 +9,8 @@ const productos = [
         stock: 200,
     },
     
-    {
+    {   
+        id: 1,
         nombre: "Cerveza Imperial Stout lata 473 Ml.",
         precio: 1690,
         imagen: "/design/images/cerveza-imperial-stout-473ml.webp",
@@ -17,7 +19,7 @@ const productos = [
         stock: 100
     },
 
-    {
+    {   id: 2,
         nombre: "Fideos tirabuzón Matarazzo 500g",
         precio: 1400,
         imagen: "/design/images/fideos-tirabuzon-matarazzo-500g.webp",
@@ -26,7 +28,8 @@ const productos = [
         stock: 70
     },
 
-    {
+    {   
+        id: 3,
         nombre: "Leche Larga Vida Liviana La Serenisima 1L",
         precio: 1840,
         imagen: "/design/images/leche-liviana-laserenisima-1L.webp",

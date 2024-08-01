@@ -39,11 +39,11 @@
                                 <h2 class="nombre-del-producto"></h2>
                                 <div class="producto-descripcion">
                                     <p><span class="precio-base"> </span> <span class="descuento"> </span> </p>
-                                    <p class="precio-final"></p>
+                                    <p class="precio-final">$ <span></span></p>
                                     <hr>
                                     <p>stock: <span class="stock"></span></p>
                                     <span>cantidad:</span>
-                                    <input class="input-cantidad-producto" type="number">
+                                    <input type="number" min="0" value="0">
                                 </div>
                             </a>
                         </article>
@@ -51,8 +51,12 @@
 
                 </div>
 
-                <div class="total">total: $ <span>0</span></div>
-                <button type="button">Comprar</button>
+                <div class="total">total: $ <span></span></div>
+
+                <button class="calcular-total">Calcular total</button>
+                <button class="finalizar-compra" type="button">Finalizar compra</button>
+                
+
 
             </section>
         </main>
