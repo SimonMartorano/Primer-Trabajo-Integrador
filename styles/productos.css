@@ -20,8 +20,12 @@ footer {
   margin: 0 auto;
 }
 
-nav, main {
+main {
   margin-bottom: 100px;
+}
+
+nav {
+  margin-bottom: 60px;
 }
 
 
@@ -33,6 +37,8 @@ a {
 
 img {
   width: 100%;
+  max-height: 230px;
+  object-fit: contain;
 }
 
 h1 {
@@ -86,13 +92,12 @@ header {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 6%;
 }
 
 .producto {
   width: 20%;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   border: 1px dashed yellowgreen;
   border-radius: 10px;
   text-align: center;
@@ -107,6 +112,7 @@ header {
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
+  cursor: auto;
 }
 
 .producto button {

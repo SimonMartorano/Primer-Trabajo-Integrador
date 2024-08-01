@@ -24,7 +24,7 @@ productos.forEach((producto) => {
         $template.querySelector(".producto-descripcion p").classList.remove("display-none");
     }
 
-    $template.querySelector(".precio-final span").textContent = precioFinal;
+    $template.querySelector(".precio-final span").textContent = parseInt(precioFinal);
     $template.querySelector(".precio-final span").setAttribute("id", `precio${producto.id}`);
     $template.querySelector(".stock").textContent = producto.stock;
     $template.querySelector("input").setAttribute("id", `input${producto.id}`);
