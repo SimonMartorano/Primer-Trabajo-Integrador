@@ -12,11 +12,9 @@ productos.forEach((producto) => {
     $template.querySelector("img").setAttribute("alt", producto.alt);
     $template.querySelector("h2").textContent = producto.nombre;
 
-    if(producto.descuento > 0){
-        $template.querySelector(".precio-base").textContent = "$ " + producto.precio;
-        $template.querySelector(".descuento").textContent = `-${producto.descuento}%`;
-        precioFinal = producto.precio - (producto.precio * producto.descuento / 100); 
-    }
+    $template.querySelector(".precio-base").textContent = "$ " + producto.precio;
+    $template.querySelector(".descuento").textContent = `-${producto.descuento}%`;
+    precioFinal = producto.precio - (producto.precio * producto.descuento / 100); 
 
     if(producto.descuento === 0){
         $template.querySelector(".producto-descripcion p").classList.add("display-none");
@@ -41,8 +39,7 @@ $contenedorProductos.appendChild($fragment);
 const $total = document.querySelector(".total span");
 $total.textContent = 0;
 
-const $comprarBtn = document.querySelector(".finalizar-compra");
-const $calcularBtn = document.querySelector(".calcular-total");
+const $finalizarCompra = document.querySelector(".finalizar-compra");
 
 let productosComprados = new Set();
 
@@ -54,13 +51,9 @@ for(let i = 0; i < productos.length; i++){
         const cantidad= parseInt(document.getElementById(`input${i}`).value);
         const stock = parseInt(document.getElementById(`stock${i}`).textContent);
 
-        if(cantidad < 0 || isNaN(cantidad)){
-            document.getElementById(`input${i}`).value = 0;
-            return;
-        }
-
-        if(cantidad > stock){
+        if(cantidad < 0 || isNaN(cantidad) || cantidad > stock){
             isCompraPermitida = false;
+            return;
         }
 
         else if(cantidad > 0 && cantidad <= stock){
@@ -75,9 +68,9 @@ for(let i = 0; i < productos.length; i++){
 }
 
 
-$calcularBtn.addEventListener('click', () => {
+$finalizarCompra.addEventListener('click', () => {
 
-    if(isCompraPermitida === false){
+    if(isCompraPermitida === false || productosComprados.size === 0){
         return;
     }
 
@@ -92,6 +85,9 @@ $calcularBtn.addEventListener('click', () => {
         document.getElementById(`stock${id}`).textContent = productos[id].stock;
 
         total += precio * cantidad;
+
+        document.getElementById(`input${id}`).value = 0;
+       
     });
 
     $total.textContent = total;
