@@ -8,6 +8,7 @@ productos.forEach((producto) => {
 
     let precioFinal = producto.precio;
     
+    $template.querySelector(".producto").setAttribute("id", `producto${producto.id}`);
     $template.querySelector("img").setAttribute("src", producto.imagen);
     $template.querySelector("img").setAttribute("alt", producto.alt);
     $template.querySelector("h2").textContent = producto.nombre;
@@ -43,7 +44,8 @@ const $finalizarCompra = document.querySelector(".finalizar-compra");
 
 let productosComprados = new Set();
 
-let isCompraPermitida = false;
+let errores = 0;
+
 
 for(let i = 0; i < productos.length; i++){
     document.getElementById(`input${i}`).addEventListener('input', () =>{
@@ -51,36 +53,42 @@ for(let i = 0; i < productos.length; i++){
         const cantidad= parseInt(document.getElementById(`input${i}`).value);
         const stock = parseInt(document.getElementById(`stock${i}`).textContent);
 
-        if(cantidad < 0 || isNaN(cantidad) || cantidad > stock){
-            isCompraPermitida = false;
-            return;
+        if(validarProducto(i, stock, cantidad)){
+            productosComprados.add(productos[i].id);
+            let err = document.querySelector(`#producto${i} .mensaje-error`);
+                if(err){
+                    err.remove();
+                    errores--;
+                }  
+        }else{
+            productosComprados.delete(productos[i].id);
+                if(!document.querySelector(`#producto${i} .mensaje-error`)){
+                        añadirError("ingrese un número valido", i);
+                        errores++;
+                    }
+            
         }
 
-        else if(cantidad > 0 && cantidad <= stock){
-            productosComprados.add(productos[i].id);
-            isCompraPermitida = true;
-        }
-        else if(cantidad == 0){
-            productosComprados.delete(productos[i].id)
-        }
 
     });
+
 }
 
 
 $finalizarCompra.addEventListener('click', () => {
 
-    if(isCompraPermitida === false || productosComprados.size === 0){
-        return;
+    if(errores > 0 || productosComprados.size == 0){
+        return
     }
 
     let total = 0;
 
     productosComprados.forEach((id) => {
+
         const precio = parseInt(document.getElementById(`precio${id}`).textContent);
         const cantidad= parseInt(document.getElementById(`input${id}`).value);
         const stock = parseInt(document.getElementById(`stock${id}`).textContent);
-
+        
         productos[id].stock -= cantidad;
         document.getElementById(`stock${id}`).textContent = productos[id].stock;
 
@@ -91,6 +99,29 @@ $finalizarCompra.addEventListener('click', () => {
     });
 
     $total.textContent = total;
-})
+});
+
+function añadirError(mensaje, idProducto){
+
+    const mensajeDeError = document.createElement("p");
+    mensajeDeError.classList.add("mensaje-error");
+    const textoMensaje = document.createTextNode(mensaje);
+    mensajeDeError.appendChild(textoMensaje);
+    document.querySelector(`#producto${idProducto} .producto-descripcion`).appendChild(mensajeDeError);
+}
+
+function validarProducto(id, stock, cantidad){
+
+    if(stock < cantidad || cantidad < 0 || isNaN(cantidad)){
+        return false;
+    }
+
+    return true;
+}
+
+
+
+
+
 
 

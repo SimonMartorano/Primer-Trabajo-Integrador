@@ -53,6 +53,11 @@ h1 {
   display: none;
 }
 
+.mensaje-error {
+  color: red;
+  margin: 0;
+}
+
 /* Navegacion */
 
 header {

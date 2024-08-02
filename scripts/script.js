@@ -15,6 +15,12 @@ for(let i = 0; i < 4; i++){
     $template.querySelector(".descuento").textContent = `-${productos[i].descuento}%`;
     $template.querySelector(".precio-final").textContent = "$ " + precioFinal;
 
+    if(productos[i].descuento === 0){
+        $template.querySelector(".producto-descripcion p").classList.add("display-none");
+    }else{
+        $template.querySelector(".producto-descripcion p").classList.remove("display-none");
+    }
+
     let $clon = document.importNode($template, true);
     $fragment.appendChild($clon);
 
