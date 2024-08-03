@@ -15,7 +15,7 @@ const productos = [
         precio: 1690,
         imagen: "/design/images/cerveza-imperial-stout-473ml.webp",
         alt: "Cerveza Imperial stout 473 mililitros",
-        descuento: 10,
+        descuento: 0,
         stock: 100
     },
 
@@ -24,7 +24,7 @@ const productos = [
         precio: 1400,
         imagen: "/design/images/fideos-tirabuzon-matarazzo-500g.webp",
         alt: "Fideos tirabuzon Matarazzo 500 gramos",
-        descuento: 25,
+        descuento: 0,
         stock: 70
     },
 
@@ -74,7 +74,7 @@ const productos = [
         precio: 1750,
         imagen: "/design/images/papel-higienico-hoja-simple-fresh-30M-higienol-4-Ud.webp",
         alt: "Papel Higiénico Hoja Simple Fresh 30 metros Higienol por 4 Unidades",
-        descuento: 0,
+        descuento: 20,
         stock: 80
     },
 
@@ -94,7 +94,7 @@ const productos = [
         precio: 1755,
         imagen: "/design/images/pegamento-instantaneo-la-gotita-2-Ml.webp",
         alt: "Pegamento Instantáneo La Gotita 2 mililitros.",
-        descuento: 0,
+        descuento: 10,
         stock: 60
     },
 
@@ -114,7 +114,7 @@ const productos = [
         precio: 2245,
         imagen: "/design/images/lampara-led-candela-fria-12w-1-Un.webp",
         alt: "lámpara led Candela fría 12 watts 1 unidad",
-        descuento: 10,
+        descuento: 0,
         stock: 60
     },
 
