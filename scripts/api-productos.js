@@ -44,7 +44,7 @@ const productos = [
         precio: 2050,
         imagen: "/design/images/aceite-girasol-natura-900ml.webp",
         alt: "Aceite de girasol Natura 900 mililitros",
-        descuento: 29,
+        descuento: 10,
         stock: 70
     },
 

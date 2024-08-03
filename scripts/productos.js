@@ -101,6 +101,8 @@ $finalizarCompra.addEventListener('click', () => {
     $total.textContent = total;
 });
 
+//Funciones
+
 function añadirError(mensaje, idProducto){
 
     const mensajeDeError = document.createElement("p");

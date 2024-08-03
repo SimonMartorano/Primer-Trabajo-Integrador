@@ -1,5 +1,7 @@
 "use strict";
 
+//Hace una lista de maximo 4 productos que tengan descuento
+
 const productosConDescuento = [];
 
 for(let producto of productos){
@@ -12,6 +14,9 @@ for(let producto of productos){
         productosConDescuento.push(producto.id);
     }
 }
+
+
+//Añade los productos con descuento dinamicamente a la pagina
 
 const $contenedorProductos = document.querySelector(".contenedor-productos");
 const $template = document.querySelector("template").content;
@@ -28,12 +33,6 @@ for(let i of productosConDescuento){
     $template.querySelector(".precio-base").textContent = "$ " + productos[i].precio;
     $template.querySelector(".descuento").textContent = `-${productos[i].descuento}%`;
     $template.querySelector(".precio-final").textContent = "$ " + precioFinal;
-
-    if(productos[i].descuento === 0){
-        $template.querySelector(".producto-descripcion p").classList.add("display-none");
-    }else{
-        $template.querySelector(".producto-descripcion p").classList.remove("display-none");
-    }
 
     let $clon = document.importNode($template, true);
     $fragment.appendChild($clon);
